@@ -14,6 +14,12 @@ import sys
 import zipfile
 from pathlib import Path
 
+# на Windows консоль по умолчанию в cp866 — принудительно UTF-8
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except AttributeError:
+    pass
+
 
 def sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
