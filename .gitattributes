@@ -17,4 +17,4 @@ app/**/*.xml          text eol=lf
 
 # smali — артефакт пересборки из APK, а не исходный язык проекта:
 # прячем его из статистики GitHub, чтобы в Languages были реальные языки
-app/smali/** linguist-vendored
+app/smali/** linguist-vendored linguist-detectable=false
