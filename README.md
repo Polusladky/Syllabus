@@ -10,6 +10,11 @@
 [![build](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml/badge.svg)](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml)
 [![Release](https://img.shields.io/github/v/release/Polusladky/Syllabus?style=flat-square&label=release&color=black)](https://github.com/Polusladky/Syllabus/releases/latest)
 
+[![Smali](https://img.shields.io/badge/Smali-Dalvik%20assembly-black?style=flat-square)](#как-это-устроено)
+[![Java 8](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](#как-это-устроено)
+[![PowerShell 5.1](https://img.shields.io/badge/PowerShell-5.1-5391FE?style=flat-square&logo=powershell&logoColor=white)](#сборка)
+[![made with DSH](https://img.shields.io/badge/made%20with-DeepSeek%20Harness-4D6BFE?style=flat-square)](https://deepseek.com)
+
 </div>
 
 ---
@@ -70,6 +75,11 @@ powershell -ExecutionPolicy Bypass -File tools\setup-toolchain.ps1   # JDK 17, b
 
 ## Как это устроено
 
+Приложение целиком на **Java**, но хранится в виде **smali** (ассемблер Dalvik) — проект
+восстановлен из APK и собирается обратно без Gradle. Новые классы пишутся на **Java 8**
+и уходят в `classes2.dex`, сборка и релизы — на **PowerShell 5.1**.
+
+
 Приложение разбирает вёрстку страницы расписания колледжа в объекты `WeekSchedule`,
 `DaySchedule` и `Lesson`, складывает результат в кэш и дальше работает офлайн.
 Замены разбираются отдельно и накладываются на неделю. Будильники ставятся через
@@ -97,6 +107,12 @@ docs/screenshots/    скриншоты для README
 - Парсер зависит от разметки сайта: если её поменяют, приложение покажет предупреждение
   «часть пар не распознана» и продолжит работать с тем, что разобрало.
 - Проект собирается только на Windows: скрипты сборки — PowerShell.
+
+## Как это сделано
+
+Код, рефакторинг smali, сборка APK и релизы — с помощью
+**[DeepSeek Harness (DSH)](https://deepseek.com)** — агента, который живёт в терминале,
+сам правит smali, гоняет сборку и раскладывает релизы.
 
 ## Лицензия
 
