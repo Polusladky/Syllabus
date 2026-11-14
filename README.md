@@ -8,7 +8,6 @@
 [![Android 5.0+](https://img.shields.io/badge/Android-5.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#требования)
 [![minSdk 21](https://img.shields.io/badge/minSdk-21-3DDC84?style=flat-square)](#требования)
 [![Release](https://img.shields.io/github/v/release/Polusladky/Syllabus?style=flat-square&label=release&color=black)](https://github.com/Polusladky/Syllabus/releases/latest)
-[![License MIT](https://img.shields.io/badge/license-MIT-black?style=flat-square)](LICENSE)
 
 </div>
 
@@ -100,5 +99,8 @@ docs/screenshots/    скриншоты для README
 
 ## Лицензия
 
-Код — [MIT](LICENSE). Шрифт Tiny5 распространяется по SIL Open Font License 1.1
-(текст лицензии — `app/assets/fonts/OFL.txt`).
+Отдельной лицензии у кода нет: проект открыт для чтения и личного использования,
+но переиспользование и распространение согласуйте с автором.
+
+Шрифт Tiny5 распространяется по SIL Open Font License 1.1 — текст в
+`app/assets/fonts/OFL.txt`.

@@ -2339,19 +2339,6 @@
 
     invoke-direct {p0, v2}, Lru/okei/timetable/SettingsActivity;->addGroup(Ljava/lang/String;)V
 
-    const v2, 0x7f0600d0
-
-    .line 751
-    invoke-virtual {p0, v2}, Lru/okei/timetable/SettingsActivity;->getString(I)Ljava/lang/String;
-
-    move-result-object v2
-
-    new-instance v4, Lru/okei/timetable/SettingsActivity$41;
-
-    invoke-direct {v4, p0}, Lru/okei/timetable/SettingsActivity$41;-><init>(Lru/okei/timetable/SettingsActivity;)V
-
-    invoke-direct {p0, v2, v4}, Lru/okei/timetable/SettingsActivity;->addAction(Ljava/lang/String;Lru/okei/timetable/SettingsActivity$Action;)V
-
     const v2, 0x7f06006e
 
     .line 758

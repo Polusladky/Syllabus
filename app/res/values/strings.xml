@@ -208,7 +208,6 @@
     <string name="onboard_group_title">ВАША ГРУППА</string>
     <string name="onboard_master_section">МАСТЕР НАСТРОЙКИ</string>
     <string name="onboard_next">ДАЛЕЕ</string>
-    <string name="onboard_open">[ ЭКРАН ПЕРВОГО ЗАПУСКА ]</string>
     <string name="onboard_optional">ОПЦИОНАЛЬНО</string>
     <string name="onboard_perm_ask">РАЗРЕШИТЬ</string>
     <string name="onboard_perm_hint">БЕЗ НИХ БУДИЛЬНИК МОЖЕТ НЕ СРАБОТАТЬ</string>
@@ -343,7 +342,7 @@
     <string name="settings_82">ГАСИТЬ ЭКРАН · ВКЛ</string>
     <string name="settings_83">ГАСИТЬ ЭКРАН · ВЫКЛ</string>
     <string name="settings_84">ПРИЛОЖЕНИЕ</string>
-    <string name="settings_85">ЗАПУСК · ДИАГНОСТИКА · СБРОС</string>
+    <string name="settings_85">ДИАГНОСТИКА · СБРОС</string>
     <string name="settings_86">ФАЙЛ НЕ ПРОЧИТАН</string>
     <string name="settings_87">замен</string>
     <string name="settings_88">КОРОТКАЯ</string>

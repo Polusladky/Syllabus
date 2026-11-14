@@ -431,8 +431,6 @@
 
 .field public static final onboard_next:I = 0x7f0600cf
 
-.field public static final onboard_open:I = 0x7f0600d0
-
 .field public static final onboard_optional:I = 0x7f0600d1
 
 .field public static final onboard_perm_ask:I = 0x7f0600d2

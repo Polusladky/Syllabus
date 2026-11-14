@@ -51,7 +51,7 @@
 
     iget-object v2, v0, Lru/okei/timetable/OnboardActivity$22;->val$name:Landroid/widget/TextView;
 
-    const-string v3, "POLUSLADKY/TABEL"
+    const-string v3, "POLUSLADKY/SYLLABUS"
 
     const-wide/16 v4, 0x0
 

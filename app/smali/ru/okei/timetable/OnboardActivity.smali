@@ -18,9 +18,9 @@
 
 .field public static final PREFS:Ljava/lang/String; = "onboard"
 
-.field public static final REPO_NAME:Ljava/lang/String; = "POLUSLADKY/TABEL"
+.field public static final REPO_NAME:Ljava/lang/String; = "POLUSLADKY/SYLLABUS"
 
-.field public static final REPO_URL:Ljava/lang/String; = "https://github.com/Polusladky/Tabel"
+.field public static final REPO_URL:Ljava/lang/String; = "https://github.com/Polusladky/Syllabus"
 
 .field private static final REQ_PERMISSION:I = 0x47
 
@@ -2085,7 +2085,7 @@
     .line 903
     invoke-virtual {v3}, Lru/okei/timetable/ui/PixelGithubView;->showAll()V
 
-    const-string v1, "POLUSLADKY/TABEL"
+    const-string v1, "POLUSLADKY/SYLLABUS"
 
     .line 904
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V

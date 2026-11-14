@@ -293,7 +293,6 @@
     <public type="string" name="onboard_group_title" id="0x7f0600cd" />
     <public type="string" name="onboard_master_section" id="0x7f0600ce" />
     <public type="string" name="onboard_next" id="0x7f0600cf" />
-    <public type="string" name="onboard_open" id="0x7f0600d0" />
     <public type="string" name="onboard_optional" id="0x7f0600d1" />
     <public type="string" name="onboard_perm_ask" id="0x7f0600d2" />
     <public type="string" name="onboard_perm_hint" id="0x7f0600d3" />
