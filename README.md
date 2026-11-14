@@ -2,23 +2,38 @@
 
 # Syllabus
 
-**Расписание колледжа ОКЭИ: пары, замены, звонки и будильник к первой паре.**
-Один раз загрузили неделю — дальше всё работает без интернета.
+Расписание колледжа ОКЭИ. Пары, замены, звонки, будильник к первой паре.
+Неделя грузится один раз, дальше приложение работает без сети.
 
-[![Android 5.0+](https://img.shields.io/badge/Android-5.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#требования)
-[![minSdk 21](https://img.shields.io/badge/minSdk-21-3DDC84?style=flat-square)](#требования)
+```text
+┌─────────────────────────────────────────────────────────────────┐
+│ $ syllabus --week                                               │
+│ ПОНЕДЕЛЬНИК · 16.11 · неделя 3                                  │
+│  1  08:30–10:00  УП. 05 Учебная практика                        │
+│  2  10:10–11:40  УП. 05 Учебная практика                        │
+│  3  12:00–13:30  УП. 05 Учебная практика                        │
+│  ВТОРНИК · 17.11 — пар нет                                      │
+│                                                                 │
+│ $ syllabus --alarm                                              │
+│ 07:30 · за 2 часа до первой пары · 4 сигнала                    │
+│                                                                 │
+│ $ ./build.ps1                                                   │
+│ Готово: dist/okei-schedule-v20.2.apk · 405 КБ · подписан        │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+[![Android 5.0+](https://img.shields.io/badge/Android-5.0%2B-black?style=flat-square&logo=android&logoColor=white)](#требования)
+[![minSdk 21](https://img.shields.io/badge/minSdk-21-black?style=flat-square)](#требования)
 [![build](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml/badge.svg)](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml)
-[![Release](https://img.shields.io/github/v/release/Polusladky/Syllabus?style=flat-square&label=release&color=black)](https://github.com/Polusladky/Syllabus/releases/latest)
+[![release](https://img.shields.io/github/v/release/Polusladky/Syllabus?style=flat-square&label=release&color=black)](https://github.com/Polusladky/Syllabus/releases/latest)
 
 [![Smali](https://img.shields.io/badge/Smali-Dalvik%20assembly-black?style=flat-square)](#как-это-устроено)
-[![Python 3](https://img.shields.io/badge/Python-3-3776AB?style=flat-square&logo=python&logoColor=white)](#проверка-сборки)
-[![Java 8](https://img.shields.io/badge/Java-8-ED8B00?style=flat-square&logo=openjdk&logoColor=white)](#как-это-устроено)
-[![PowerShell 5.1](https://img.shields.io/badge/PowerShell-5.1-5391FE?style=flat-square&logo=powershell&logoColor=white)](#сборка)
-[![made with DSH](https://img.shields.io/badge/made%20with-DeepSeek%20Harness-4D6BFE?style=flat-square)](https://deepseek.com)
+[![Java 8](https://img.shields.io/badge/Java-8-black?style=flat-square&logo=openjdk&logoColor=white)](#как-это-устроено)
+[![PowerShell 5.1](https://img.shields.io/badge/PowerShell-5.1-black?style=flat-square&logo=powershell&logoColor=white)](#сборка)
+[![Python 3](https://img.shields.io/badge/Python-3-black?style=flat-square&logo=python&logoColor=white)](#проверка-сборки)
+[![MIT](https://img.shields.io/badge/license-MIT-black?style=flat-square)](LICENSE)
 
 </div>
-
----
 
 ## Скриншоты
 
@@ -28,32 +43,38 @@
 
 ## Возможности
 
-- **Неделя целиком** — дни с датами, номера пар, время начала и конца, перемены с длительностью.
-- **Замены с сайта** — отдельный разбор страницы замен, подсветка изменённых пар.
-- **Будильник к первой паре** — за 2 часа до начала, свой звук или системный сигнал, вибрация,
+- **Неделя целиком** — дни с датами, номера пар, начало и конец, перемены с длительностью.
+- **Замены с сайта** — отдельный разбор страницы замен, изменённые пары подсвечиваются.
+- **Будильник к первой паре** — за 2 часа, свой звук или системный сигнал, вибрация,
   свайп-ползунки «выключить» и «отложить на 5 минут».
-- **Виджеты** — 4×2 и компактный, рисуются вручную шрифтом приложения, без сторонних библиотек.
+- **Виджеты** — 4×2 и компактный, рисуются вручную шрифтом приложения.
 - **«Сейчас» и «следующая пара»** — отдельные экраны свайпом, с таймером до конца пары.
-- **Архив недель** — каждая загруженная неделя сохраняется и открывается без сети.
+- **Архив недель** — каждая загруженная неделя открывается без сети.
 - **Поделиться** — расписание картинкой или текстом.
-- **Тёмная и светлая темы** — монохром, пиксельный шрифт Tiny5, никаких скруглений и теней.
-- **Бот MAX** — расписание можно забирать из чата «МАКС» через бота, если сайт недоступен.
-- **Диагностика** — проверка парсера, будильников, разрешений и журнала ошибок.
+- **Тёмная и светлая темы** — монохром, пиксельный шрифт Tiny5, без скруглений и теней.
+- **Бот MAX** — расписание можно тянуть из чата «МАКС», если сайт недоступен.
+- **Диагностика** — парсер, будильники, разрешения, журнал ошибок.
 
-Приложение не тянет за собой AndroidX и Gradle: только фреймворк, свои View и шрифт в assets.
-Итоговый APK — около 400 КБ.
+Без AndroidX и Gradle: только фреймворк, свои View, шрифт в assets. APK — около 400 КБ.
 
 ## Установка
 
 1. Скачайте APK из [Releases](https://github.com/Polusladky/Syllabus/releases/latest).
-2. Установите (Android может попросить разрешить установку из этого источника).
-3. При первом запуске укажите группу — код как на сайте колледжа, например `3ИС3`.
+2. Разрешите установку из этого источника.
+3. Укажите группу — код как на сайте колледжа, например `3ИС3`.
+
+> [!TIP]
+> Группу можно сменить в настройках, старые недели останутся в архиве.
 
 **Требования:** Android 5.0 (API 21) и новее.
 
+> [!IMPORTANT]
+> Это не официальный источник расписания. Данные берутся с сайта колледжа, возможны
+> задержки и ошибки разбора — сверяйтесь с сайтом и уточняйте в чате «МАКС» или у куратора.
+
 ## Сборка
 
-Нужен Windows 10+ с PowerShell и `curl.exe`. Всё остальное скачивается само:
+Нужен Windows 10+ с PowerShell и `curl.exe`, остальное скачивается само:
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File tools\setup-toolchain.ps1   # JDK 17, build-tools 34, apktool 2.11.1
@@ -64,15 +85,11 @@ powershell -ExecutionPolicy Bypass -File tools\setup-toolchain.ps1   # JDK 17, b
 добавляет вторую dex, выравнивает и подписывает APK. Результат — `dist/okei-schedule-v<версия>.apk`,
 лог — `logs/last-run.txt`.
 
-Ключ подписи в репозиторий не входит. Положите свой в `keystore/syllabus.keystore`
-и пароль в `keystore/keystore-pass.txt` — или укажите пути параметрами:
-
-```powershell
-.\build.ps1 -Keystore D:\keys\my.keystore -KeystorePassFile D:\keys\pass.txt
-# то же через переменные окружения: SYLLABUS_KEYSTORE, SYLLABUS_KEYSTORE_PASS_FILE
-```
-
-Без ключа соберётся неподписанный APK — для проверки кода этого достаточно.
+> [!WARNING]
+> Ключ подписи в репозитории не лежит. Положите свой в `keystore/syllabus.keystore` и пароль
+> в `keystore/keystore-pass.txt`, либо укажите пути: `-Keystore`, `-KeystorePassFile`
+> (или переменные `SYLLABUS_KEYSTORE`, `SYLLABUS_KEYSTORE_PASS_FILE`).
+> Без ключа соберётся неподписанный APK.
 
 ## Проверка сборки
 
@@ -81,56 +98,43 @@ python tools/apk_report.py dist/okei-schedule-v20.2.apk
 python tools/apk_report.py new.apk --compare dist/okei-schedule-v20.2.apk
 ```
 
-Скрипт печатает размер, SHA-256, список dex и наличие подписи, а с `--compare` —
-какие записи отличаются от эталонного APK. Только стандартная библиотека Python 3.
+Печатает размер, SHA-256, список dex и наличие подписи; с `--compare` — какие записи
+отличаются от эталона. Только стандартная библиотека Python 3.
 
 ## Как это устроено
 
-Приложение написано на **Java 8**. В репозитории оно лежит в виде **smali** (ассемблер
-Dalvik) — это артефакт пересборки восстановленного APK, поэтому GitHub не считает его
-исходным языком (`.gitattributes` помечает `app/smali` как `linguist-vendored`).
-Новые классы пишутся на Java и уходят в `classes2.dex`; сборка и релизы — **PowerShell 5.1**,
-проверка APK — **Python 3** (`tools/apk_report.py`).
+Приложение на **Java 8**. В репозитории оно лежит в виде **smali** — ассемблера Dalvik,
+полученного при восстановлении APK. Это артефакт пересборки, а не исходный язык проекта.
 
+Логика разбирает страницу расписания в `WeekSchedule`, `DaySchedule` и `Lesson`, кладёт
+результат в кэш и дальше работает офлайн. Замены разбираются отдельно и накладываются
+на неделю. Будильники ставятся через `AlarmManager` на первую пару дня, звук играет
+`MediaPlayer` с `USAGE_ALARM`.
 
-Приложение разбирает вёрстку страницы расписания колледжа в объекты `WeekSchedule`,
-`DaySchedule` и `Lesson`, складывает результат в кэш и дальше работает офлайн.
-Замены разбираются отдельно и накладываются на неделю. Будильники ставятся через
-`AlarmManager` на первую пару дня, звук играет через `MediaPlayer` с `USAGE_ALARM`.
-
-Код приложения хранится в виде smali (`app/`), потому что проект собран из APK.
 Новые классы пишутся на Java в `patch/fixsrc/`, компилируются в `classes2.dex` и вызываются
-из smali — так проще поддерживать логику, чем править smali руками.
+из smali — править логику так проще, чем руками.
+
+> [!NOTE]
+> GitHub не считает smali языком проекта: `.gitattributes` помечает `app/smali` как
+> `linguist-vendored`. В статистике остаются Java, PowerShell и Python.
 
 ## Структура
 
-```
+```text
 app/                 smali, ресурсы, AndroidManifest.xml, apktool.yml — то, что собирается в APK
-patch/fixsrc/        Java-классы, подключаемые к приложению (компилируются в classes2.dex)
+patch/fixsrc/        Java-классы, которые уходят в classes2.dex
 patch/stubs/         заглушки для компиляции этих классов
-tools/               setup-toolchain.ps1 — скачивание JDK, SDK и apktool
+tools/               setup-toolchain.ps1, apk_report.py
 build.ps1            сборка APK одной командой
 docs/screenshots/    скриншоты для README
 ```
 
 ## Ограничения
 
-- Приложение **не является официальным источником** расписания: данные берутся с сайта колледжа,
-  возможны задержки и ошибки разбора. Сверяйтесь с сайтом и уточняйте в чате «МАКС» или у куратора.
-- Парсер зависит от разметки сайта: если её поменяют, приложение покажет предупреждение
-  «часть пар не распознана» и продолжит работать с тем, что разобрало.
-- Проект собирается только на Windows: скрипты сборки — PowerShell.
-
-## Как это сделано
-
-Код, рефакторинг smali, сборка APK и релизы — с помощью
-**[DeepSeek Harness (DSH)](https://deepseek.com)** — агента, который живёт в терминале,
-сам правит smali, гоняет сборку и раскладывает релизы.
+- Парсер зависит от разметки сайта: если её поменяют, приложение покажет «часть пар
+  не распознана» и продолжит работать с тем, что разобрало.
+- Сборка только на Windows: скрипты — PowerShell.
 
 ## Лицензия
 
-Отдельной лицензии у кода нет: проект открыт для чтения и личного использования,
-но переиспользование и распространение согласуйте с автором.
-
-Шрифт Tiny5 распространяется по SIL Open Font License 1.1 — текст в
-`app/assets/fonts/OFL.txt`.
+Код — [MIT](LICENSE). Шрифт Tiny5 — SIL Open Font License 1.1, текст в `app/assets/fonts/OFL.txt`.
