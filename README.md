@@ -7,6 +7,7 @@
 
 [![Android 5.0+](https://img.shields.io/badge/Android-5.0%2B-3DDC84?style=flat-square&logo=android&logoColor=white)](#требования)
 [![minSdk 21](https://img.shields.io/badge/minSdk-21-3DDC84?style=flat-square)](#требования)
+[![build](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml/badge.svg)](https://github.com/Polusladky/Syllabus/actions/workflows/build.yml)
 [![Release](https://img.shields.io/github/v/release/Polusladky/Syllabus?style=flat-square&label=release&color=black)](https://github.com/Polusladky/Syllabus/releases/latest)
 
 </div>
