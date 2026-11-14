@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#ff000000</color>
+    <color name="dim">#ffb8b8b8</color>
+    <color name="fg">#ffffffff</color>
+    <color name="icon_bg">#ff000000</color>
+    <color name="ink_on_paper">#ff000000</color>
+    <color name="muted">#ff767676</color>
+    <color name="transparent">#00000000</color>
+</resources>

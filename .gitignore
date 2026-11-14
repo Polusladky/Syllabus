@@ -1,0 +1,20 @@
+# Инструменты и артефакты сборки
+.toolchain/
+build/
+dist/
+logs/
+patch/classes/
+patch/dexout/
+
+# Ключи подписи — только локально, в репозиторий не попадают
+keystore/
+*.keystore
+*.jks
+*.p12
+*.idsig
+
+# Системное
+.idea/
+*.iml
+.DS_Store
+Thumbs.db

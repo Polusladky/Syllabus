@@ -1,0 +1,16 @@
+# Текстовые файлы выкладываем с LF. На Windows core.autocrlf=true по умолчанию
+# переводит их в CRLF, и собранный APK тогда отличается от релиза в dist/
+# размером девяти текстовых assets. С этими правилами checkout даёт те же байты,
+# что лежат в git.
+app/assets/**/*.js    text eol=lf
+app/assets/**/*.html  text eol=lf
+app/assets/**/*.txt   text eol=lf
+app/**/*.smali        text eol=lf
+app/**/*.xml          text eol=lf
+
+# Бинарные файлы не трогаем
+*.ttf      binary
+*.png      binary
+*.apk      binary
+*.jar      binary
+*.keystore binary

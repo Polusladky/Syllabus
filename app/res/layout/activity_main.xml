@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/root" android:background="@color/bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:id="@id/main_column" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/header" android:paddingLeft="8.0dip" android:paddingTop="16.0dip" android:paddingRight="8.0dip" android:paddingBottom="14.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="13.0sp" android:textColor="@color/fg" android:id="@id/subtitle" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:letterSpacing="0.06" />
+            <ru.okei.timetable.SettingsIconView android:id="@id/icon_settings" android:background="?android:selectableItemBackground" android:layout_width="40.0dip" android:layout_height="40.0dip" android:contentDescription="@string/settings_title" />
+            <ru.okei.timetable.ui.ShareIconView android:id="@id/icon_share" android:background="?android:selectableItemBackground" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_marginLeft="4.0dip" android:contentDescription="@string/main_share" />
+        </LinearLayout>
+        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/alarm_bar" android:background="?android:selectableItemBackground" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="11.0sp" android:textColor="@color/muted" android:id="@id/alarm_state" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" android:letterSpacing="0.08" />
+            <TextView android:textSize="11.0sp" android:textColor="@color/fg" android:id="@id/alarm_action" android:layout_width="wrap_content" android:layout_height="wrap_content" android:includeFontPadding="false" android:letterSpacing="0.08" />
+        </LinearLayout>
+        <View android:id="@id/bar_line" android:background="@color/muted" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+        <FrameLayout android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0">
+            <ScrollView android:id="@id/scroll" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+                <LinearLayout android:orientation="vertical" android:id="@id/content" android:paddingTop="2.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+            </ScrollView>
+            <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/state_box" android:background="@color/bg" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+                <TextView android:textSize="13.0sp" android:textColor="@color/fg" android:id="@id/state_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/loading" android:includeFontPadding="false" android:textAllCaps="true" android:letterSpacing="0.14" />
+                <TextView android:textSize="11.0sp" android:textColor="@color/muted" android:gravity="center" android:id="@id/state_text" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:includeFontPadding="false" android:lineSpacingExtra="5.0dip" />
+                <TextView android:textSize="12.0sp" android:textColor="@color/fg" android:id="@id/retry" android:background="?android:selectableItemBackground" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="22.0dip" android:text="@string/retry_all_caps" android:includeFontPadding="false" />
+            </LinearLayout>
+        </FrameLayout>
+        <LinearLayout android:orientation="horizontal" android:paddingLeft="8.0dip" android:paddingTop="10.0dip" android:paddingRight="8.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="10.0sp" android:textColor="@color/muted" android:id="@id/footer" android:layout_width="0.0dip" android:layout_height="wrap_content" android:includeFontPadding="false" android:layout_weight="1.0" />
+            <TextView android:textSize="10.0sp" android:textColor="@color/muted" android:id="@id/footer_site" android:background="?android:selectableItemBackground" android:paddingLeft="8.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/site_all_caps" android:includeFontPadding="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <FrameLayout android:id="@id/intro_overlay" android:background="@color/bg" android:focusable="true" android:clickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <ru.okei.timetable.IntroOutlineView android:textSize="42.0sp" android:textColor="@color/fg" android:gravity="center_horizontal" android:layout_gravity="center" android:id="@id/intro_text" android:layout_width="fill_parent" android:layout_height="fill_parent" android:singleLine="true" android:includeFontPadding="false" />
+    </FrameLayout>
+</FrameLayout>
