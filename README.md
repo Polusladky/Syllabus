@@ -32,6 +32,7 @@
 [![PowerShell 5.1](https://img.shields.io/badge/PowerShell-5.1-black?style=flat-square&logo=powershell&logoColor=white)](#сборка)
 [![Python 3](https://img.shields.io/badge/Python-3-black?style=flat-square&logo=python&logoColor=white)](#проверка-сборки)
 [![MIT](https://img.shields.io/badge/license-MIT-black?style=flat-square)](LICENSE)
+[![made with DSH](https://img.shields.io/badge/made%20with-DeepSeek%20Harness-black?style=flat-square)](https://deepseek.com)
 
 </div>
 
